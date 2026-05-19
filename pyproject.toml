@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "corsica_ci_artifact_reduction"
-version = "0.0.4"
+version = "0.0.5"
 description = "Package to reduce artifacts in eeg from cochlear implant stimuli"
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.9"
