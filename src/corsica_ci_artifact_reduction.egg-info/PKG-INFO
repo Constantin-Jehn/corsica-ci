@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: corsica_ci_artifact_reduction
+Version: 0.0.5
+Summary: Package to reduce artifacts in eeg from cochlear implant stimuli
+Author-email: Constantin Jehn <constantin.jehn@fau.de>
+Project-URL: Repository, https://github.com/LeonieRichterFAU/cors-ica
+Project-URL: Paper, https://arxiv.org/abs/2501.12345
+Keywords: eeg,ci,cochlear-implant,artifact-rejection
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+**Project description**
+*CI_Artifact Reduction*
+
+Filtering CI Artifacts based on Correlation of Indepndent Components and audio 
+
+*Method Overview*
+1. EEG data is decomposed into independent components using ICA.
+2. Each component is cross-correlated with the audio stimulus.
+3. The peak correlation within an window (can be adjusted) is identified.
+4. The SNR value is computed from the correlation peak.
+5. Components with SNR values above a defined threshold are excluded.
+6. The cleaned EEG signal is reconstructed from the remaining components.

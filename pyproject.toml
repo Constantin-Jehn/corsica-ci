@@ -3,11 +3,10 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "corsica_ci_artifact_reduction"
-version = "0.0.5"
+name = "ci-artifact-reduction" #TODO name ändern
+version = "0.0.11"
 description = "Package to reduce artifacts in eeg from cochlear implant stimuli"
 readme = {file = "README.md", content-type = "text/markdown"}
-requires-python = ">=3.9"
 authors = [
   { name = "Constantin Jehn", email = "constantin.jehn@fau.de" }
 ]
@@ -23,8 +22,7 @@ keywords = [
 
 [project.urls]
 Repository = "https://github.com/LeonieRichterFAU/cors-ica"
-Paper (under review) = "https://arxiv.org/abs/2501.12345"
+Paper = "https://arxiv.org/abs/2501.12345"
 
 
-dependencies = []
 

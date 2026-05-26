@@ -209,7 +209,7 @@ def plotting(lags_s,corr_s,fs_eeg, snr_s, output_dir, subject_id, trial_id, peak
         ax.plot(lags_ms, corr, color='dimgrey', linewidth=1.5)
 
         # Mark the search window (-5ms to 15ms) in grey
-        ax.axvspan(peak_win_negative * 1000, peak_win_pos * 1000, color='grey', alpha=0.3, label='Search Window')
+        ax.axvspan(-peak_win_negative * 1000, peak_win_pos * 1000, color='grey', alpha=0.3, label='Search Window')
 
         
         # Highlight Peak within the window
@@ -232,7 +232,10 @@ def plotting(lags_s,corr_s,fs_eeg, snr_s, output_dir, subject_id, trial_id, peak
         ax.set_ylabel('Cross-correlation', fontsize=10)
         #ax.set_title("Correlation-based artifact rejection", fontsize=16, pad=15, weight='bold')
 
-        ax.text(-150, 0.6, 'Search\nwindow', fontsize = 12)
+        if i == 0:
+            ax.text(-150, 0.6, 'Search\nwindow', fontsize = 12)
+
+        
         ax.text(100, 1.0, f'Peak\nSNR={snr:.1f}dB', fontsize=12)
 
         # Remove upper and right spines
@@ -293,6 +296,25 @@ def calculate_metadata(ics, exclude, snr_s, peak_in_seconds_after_stimulus_s, ou
         "Excluded peak times in seconds after stimulus": excluded_peak_times_in_seconds_after_stimulus,
         "Mean SNR of remaining ICs": round(mean_snr_cleaned, 3),
         "Mean SNR of excluded ICs": round(mean_snr_excluded, 3),
+    }
+
+    units = {
+        "Trial ID": "",
+        "Number of independent components": "",
+        "Number of excluded ICs": "",
+        "Indices of excluded ICs": "",
+        "Percentage of remaining ICs": "%",
+        "Excluded ICs SNR values": "dB",
+        "Number of used ICs": "",
+        "Indices of used ICs": "",
+        "Used ICs SNR values": "dB",
+        "Highest SNR": "dB",
+        "Mean SNR": "dB",
+        "Mean peak time in seconds after stimulus of excluded ICs": "s",
+        "All peak times in seconds after stimulus": "s",
+        "Excluded peak times in seconds after stimulus": "s",
+        "Mean SNR of remaining ICs": "dB",
+        "Mean SNR of excluded ICs": "dB",
     }
 
 

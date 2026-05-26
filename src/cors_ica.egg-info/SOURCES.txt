@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/CORSICA/__init__.py
+src/CORSICA/artifact_reduction.py
+src/cors_ica.egg-info/PKG-INFO
+src/cors_ica.egg-info/SOURCES.txt
+src/cors_ica.egg-info/dependency_links.txt
+src/cors_ica.egg-info/top_level.txt
+tests/test.py
