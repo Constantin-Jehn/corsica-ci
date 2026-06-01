@@ -15,4 +15,4 @@ print(attended_audio)
 #output
 output_dir = "/Users/leonierichter/Documents/2100_Work/2026_Uni_Chair_Senory_in_Neuroengineering"
 
-cleaned_eeg= ci_artifact_reduction(raw, "102", "1", output_dir, snr_threshold, fs_eeg, attended_audio, plot=True, metadata=True)
+cleaned_eeg= ci_artifact_reduction(raw, "102", "2B", output_dir,  fs_eeg, attended_audio, snr_threshold, plot=True, metadata=True)

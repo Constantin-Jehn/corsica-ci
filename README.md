@@ -17,9 +17,9 @@ cleaned_eeg = ci_artifact_reduction(
     subject_id="S01",
     trial_id="T01",
     output_dir="./results",
-    snr_threshold=6,
     fs_eeg=1000,
     attended_audio=attended_audio,
+    snr_threshold=9.5,
     plot=True,
     metadata=True
 )
@@ -95,9 +95,9 @@ cleaned_eeg = ci_artifact_reduction(
     subject_id="S01",
     trial_id="T01",
     output_dir="./results",
-    snr_threshold=6,
     fs_eeg=1000,
     attended_audio=attended_audio,
+    snr_threshold=9.5,
     plot=True,
     metadata=True
 )
